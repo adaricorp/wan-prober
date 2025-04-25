@@ -1,0 +1,17 @@
+---
+probe_config:
+  min_interval: 30s
+  timeout: 5s
+  attempts: 3
+
+interfaces:
+  - name: eno1
+  - name: eno2
+
+targets:
+  - host: https://www.example.org
+    probe: http
+  - host: https://www.example.com
+    probe: http
+  - host: https://www.example.net
+    probe: http
