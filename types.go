@@ -21,7 +21,8 @@ type ProbeConfiguration struct {
 }
 
 type Interface struct {
-	Name string `yaml:"name"`
+	Name        string `yaml:"name"`
+	Description string `yaml:"description"`
 }
 
 type Target struct {
