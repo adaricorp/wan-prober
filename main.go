@@ -281,6 +281,8 @@ func probeInterface(
 			"Checking interface health",
 			"interface",
 			iface.Name,
+			"description",
+			iface.Description,
 		)
 
 		// Try probes in a random order
@@ -291,6 +293,8 @@ func probeInterface(
 				"Probing target",
 				"interface",
 				iface.Name,
+				"description",
+				iface.Description,
 				"target",
 				target.Host,
 				"type",
@@ -322,6 +326,8 @@ func probeInterface(
 								"Probe target is unreachable",
 								"interface",
 								iface.Name,
+								"description",
+								iface.Description,
 								"target",
 								target.Host,
 								"error",
@@ -339,6 +345,8 @@ func probeInterface(
 								"All DNS resolvers are unreachable",
 								"interface",
 								iface.Name,
+								"description",
+								iface.Description,
 								"target",
 								target.Host,
 							)
@@ -351,6 +359,8 @@ func probeInterface(
 								"Network is down or misconfigured",
 								"interface",
 								iface.Name,
+								"description",
+								iface.Description,
 								"target",
 								target.Host,
 								"error",
@@ -370,6 +380,8 @@ func probeInterface(
 								"Probe target doesn't exist",
 								"interface",
 								iface.Name,
+								"description",
+								iface.Description,
 								"target",
 								target.Host,
 								"error",
@@ -387,6 +399,8 @@ func probeInterface(
 								"Error during probe",
 								"interface",
 								iface.Name,
+								"description",
+								iface.Description,
 								"target",
 								target.Host,
 								"error",
@@ -409,6 +423,8 @@ func probeInterface(
 							"Probe target is healthy",
 							"interface",
 							iface.Name,
+							"description",
+							iface.Description,
 							"target",
 							target.Host,
 						)
@@ -443,6 +459,8 @@ func probeInterface(
 					"No valid targets",
 					"interface",
 					iface.Name,
+					"description",
+					iface.Description,
 					"targets",
 					len(config.Targets),
 					"valid",
@@ -458,6 +476,8 @@ func probeInterface(
 					"All valid targets are not unreachable",
 					"interface",
 					iface.Name,
+					"description",
+					iface.Description,
 					"targets",
 					len(config.Targets),
 					"valid",
@@ -472,6 +492,8 @@ func probeInterface(
 					"All valid targets are unreachable",
 					"interface",
 					iface.Name,
+					"description",
+					iface.Description,
 					"targets",
 					len(config.Targets),
 					"valid",
@@ -487,12 +509,16 @@ func probeInterface(
 				"Interface is healthy",
 				"interface",
 				iface.Name,
+				"description",
+				iface.Description,
 			)
 		} else {
 			logger.Warn(
 				"Interface is unhealthy",
 				"interface",
 				iface.Name,
+				"description",
+				iface.Description,
 			)
 		}
 

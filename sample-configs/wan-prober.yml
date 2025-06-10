@@ -7,6 +7,7 @@ probe_config:
 interfaces:
   - name: eno1
   - name: eno2
+    description: "Backup WAN"
 
 targets:
   - host: https://www.example.org
