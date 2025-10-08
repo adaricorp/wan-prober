@@ -58,6 +58,8 @@ jobs:
 
       - name: Govulncheck
         uses: golang/govulncheck-action@v1
+        env:
+          GOTOOLCHAIN: local
         with:
           go-version-input: ""
           check-latest: true
