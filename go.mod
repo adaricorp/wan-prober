@@ -1,8 +1,8 @@
 module github.com/adaricorp/wan-prober
 
-go 1.24.0
+go 1.24.9
 
-toolchain go1.24.8
+toolchain go1.24.9
 
 require (
 	github.com/peterbourgon/ff/v4 v4.0.0-beta.1
