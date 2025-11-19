@@ -5,7 +5,7 @@ go 1.24.10
 require (
 	github.com/peterbourgon/ff/v4 v4.0.0-beta.1
 	github.com/pkg/errors v0.9.1
-	github.com/prometheus/common v0.67.2
+	github.com/prometheus/common v0.67.3
 	go.yaml.in/yaml/v3 v3.0.4
 )
 
