@@ -61,7 +61,6 @@ func ProbeHTTP(
 				syscall.SO_BINDTODEVICE,
 				config.BindInterface,
 			)
-			return
 		}))
 		if err != nil {
 			return err
