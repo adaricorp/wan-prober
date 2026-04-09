@@ -3,6 +3,7 @@ package probe
 import (
 	"context"
 	"crypto/tls"
+	"errors"
 	"fmt"
 	"log/slog"
 	"math/rand/v2"
@@ -13,7 +14,6 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/pkg/errors"
 	"github.com/prometheus/common/version"
 )
 
@@ -36,7 +36,7 @@ func ProbeHTTP(
 
 	targetURL, err := url.Parse(target)
 	if err != nil {
-		return errors.Wrapf(err, "Could not parse target URL")
+		return fmt.Errorf("could not parse target URL: %w", err)
 	}
 
 	if targetURL.Hostname()[len(targetURL.Hostname())-1] != '.' {
@@ -272,7 +272,7 @@ func ProbeHTTP(
 
 	request, err := http.NewRequest(httpConfig.Method, targetURL.String(), nil)
 	if err != nil {
-		return errors.Wrapf(err, "Error creating request")
+		return fmt.Errorf("error creating request: %w", err)
 	}
 	request = request.WithContext(ctx)
 

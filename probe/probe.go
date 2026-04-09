@@ -2,10 +2,9 @@ package probe
 
 import (
 	"context"
+	"errors"
 	"log/slog"
 	"sync"
-
-	"github.com/pkg/errors"
 )
 
 type ProbeFn func(ctx context.Context, target string, config Config, dnsCache *sync.Map, logger *slog.Logger) error
