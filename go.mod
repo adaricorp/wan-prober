@@ -1,6 +1,6 @@
 module github.com/adaricorp/wan-prober
 
-go 1.25.9
+go 1.26.3
 
 require (
 	github.com/peterbourgon/ff/v4 v4.0.0-beta.1
